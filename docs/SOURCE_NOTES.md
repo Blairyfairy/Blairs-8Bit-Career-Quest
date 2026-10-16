@@ -1,0 +1,3 @@
+# Source and content notes
+
+Career information was adapted from the user-provided HTML résumé `index(20261016-133505).html` and the earlier Blair's Rune Career Online project data file. Game worlds represent broad technical specialties; dates, job titles, and issuer claims should be checked against the current public portfolio before publication. External career evidence is linked to https://blairyfairy.github.io/BlairPage/ . Technical quiz questions are fictional teaching scenarios, not representations of real employer incidents. All sprites, terrain, enemies, and boss art are generated procedurally with canvas rectangles; no third-party art assets are shipped.
