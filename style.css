@@ -19,3 +19,16 @@ header>div:first-child:hover .celestial-brand-icon,header>div:first-child:focus-
 .panel h2 .rune-icon{width:0.9em;height:0.9em;max-width:0.9em;max-height:0.9em;vertical-align:-0.08em;}
 .worldcard .rune-icon{width:14px;height:14px;max-width:14px;max-height:14px;vertical-align:-2px;}
 .tag .rune-icon{width:12px;height:12px;max-width:12px;max-height:12px;vertical-align:-1px;}
+
+/* Global hard ceiling: prevents the Celestial favicon from expanding in any game panel, map, skill, or dynamically inserted content. */
+img.rune-icon, img[src$="/Favicon.png"], img[src="assets/Favicon.png"] {
+  display:inline-block !important; width:14px !important; height:14px !important;
+  min-width:0 !important; min-height:0 !important; max-width:14px !important; max-height:14px !important;
+  inline-size:14px !important; block-size:14px !important; max-inline-size:14px !important; max-block-size:14px !important;
+  object-fit:contain !important; object-position:center !important; aspect-ratio:1/1;
+  vertical-align:-2px; flex:0 0 14px !important; transform:none !important; animation:none !important;
+}
+.panel .tag img.rune-icon, .panel .tag img[src$="/Favicon.png"] {
+  width:12px !important; height:12px !important; max-width:12px !important; max-height:12px !important;
+  inline-size:12px !important; block-size:12px !important; max-inline-size:12px !important; max-block-size:12px !important; flex-basis:12px !important;
+}
