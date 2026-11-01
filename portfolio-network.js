@@ -40,7 +40,7 @@ const observer=new MutationObserver(()=>{if(!panel || !panel.querySelector('h2')
  const selection=heading.includes('recruiter')?'Career & Recruiter Intelligence':heading.includes('vault')?'Credentials & Learning':heading.includes('world')?'Games & Interactive Worlds':heading.includes('skill')?'Cloud, Linux & Infrastructure':null;
  const chosen=selection?(groups[selection]||[]).slice(0,7):idx>=0?all.filter(x=>rules[idx].test(x.title+' '+x.url)).slice(0,6):[];
  if(!chosen.length)return;
- const wrap=document.createElement('div');wrap.className='bp-context-portal';const h=document.createElement('h3');h.textContent='<img src="assets/Favicon.png" class="rune-icon" alt=""> RELATED PROFESSIONAL LINKS';wrap.appendChild(h);
+ const wrap=document.createElement('div');wrap.className='bp-context-portal';const h=document.createElement('h3');h.innerHTML='<img src="assets/Favicon.png" class="rune-icon" alt=""> RELATED PROFESSIONAL LINKS';wrap.appendChild(h);
  chosen.forEach(item=>{const a=document.createElement('a');a.href=item.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=item.title+' ↗';wrap.appendChild(a)});
  const more=document.createElement('button');more.type='button';more.textContent='EXPLORE FULL LINK ARCHIVE ↓';more.onclick=()=>{document.getElementById('closeBtn').click();root.scrollIntoView({behavior:'smooth',block:'start'})};wrap.appendChild(more);panel.appendChild(wrap);
 });observer.observe(panel,{childList:true});
